@@ -1,0 +1,23 @@
+#!/bin/bash
+
+ME=$(basename $0)
+
+if [ "$1" == "--help" ]; then
+	echo "Welcome to TDLPL: Test-Driven Learning Programming Languages."
+	echo
+	echo "You will be presented with challenges that you should solve in the"
+	echo "programming language of your choice. After you attempt to solve the"
+	echo "challenge, issue 'make progress' (or just 'make') to continue."
+	echo
+	echo "To get past this screen, create a file called welcome.py. Consider"
+	echo "this to be your first challenge."
+	echo
+	echo "Good luck!"
+	exit 1
+fi
+
+[ -f "$ME.py" ] || exit 1
+
+touch done/$ME.done
+
+exit 0

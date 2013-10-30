@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ME=$(basename $0)
+
+if [ "$1" == "--help" ]; then
+	echo "Create a program that runs. It doesn't matter what it does, as long as it runs."
+	echo
+	exit 1
+fi
+
+run/$ME || exit 1;
+
+touch done/$ME.done
+
+exit 0
