@@ -9,8 +9,14 @@ if [ "$1" == "--help" ]; then
 	echo "programming language of your choice. After you attempt to solve the"
 	echo "challenge, issue 'make progress' (or just 'make') to continue."
 	echo
-	echo "To get past this screen, create a file called welcome.py. Consider"
-	echo "this to be your first challenge."
+	echo "When attempting to solve a challenge, name your program after the"
+	echo "challenge name you see on the 'Next challenge:' line above. Add the"
+	echo "appropriate suffix according to the language you are trying to"
+	echo "learn. The file should be in the directory you are currently in."
+	echo
+	echo "For example, to get past this screen, create a file called welcome.py"
+	echo "if you are learning Python, or welcome.rb if you are learning Ruby."
+	echo "Consider this to be your first challenge."
 	echo
 	echo "Good luck!"
 	exit 1
