@@ -22,7 +22,7 @@ if [ "$1" == "--help" ]; then
 	exit 1
 fi
 
-[ -f "$ME.py" ] || exit 1
+[ -f "run/$ME" ] || exit 1
 
 touch done/$ME.done
 
