@@ -20,10 +20,18 @@ progress: $(COMPLETION)
 	@echo supported language in test/welcome.
 	@echo
 
+.PHONY : fail/%
+fail/%:
+	@echo "::: TRY AGAIN, your program did not meet the requirement."
+	@echo
+	@test/$* --help; true
+	@echo
+	@false;
+
 done/%.done: test/% run/%
 	@echo === $*: executing...
 	@mkdir -p done
-	@$< || { echo "::: Result: FAILED"; $< --help; false; }
+	@$< || $(MAKE) -s fail/$*
 	@echo "::: CONGRATULATIONS, you passed the '$*' challenge!"
 	@echo
 
