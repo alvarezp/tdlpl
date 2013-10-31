@@ -4,6 +4,7 @@ ME=$(basename "$0")
 
 if [ "$1" == "--help" ]; then
 	echo "Create a program that prints whatever is passed as the first argument."
+	echo "The passed argument is guaranteed to be a string."
 	echo
 	exit 1
 fi
