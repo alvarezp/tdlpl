@@ -19,6 +19,10 @@ if [ "$1" == "--help" ]; then
 	echo "Consider this to be your first challenge."
 	echo
 	echo "Good luck!"
+	echo
+	echo "(BTW, make will always show an 'Error: 1' message. It means that"
+	echo "you haven't completed the course. Just ignore it and retry."
+	echo
 	exit 1
 fi
 
