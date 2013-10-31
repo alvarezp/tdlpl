@@ -24,7 +24,7 @@ done/%.done: test/% run/%
 	@echo === $*: executing...
 	@mkdir -p done
 	@$< || { echo "::: Result: FAILED"; $< --help; false; }
-	@echo "::: Result: SUCCESS!"
+	@echo "::: CONGRATULATIONS, you passed the '$*' challenge!"
 	@echo
 
 run/%: %.py
