@@ -1,4 +1,4 @@
-CHALLENGES := welcome execute hello
+CHALLENGES := welcome execute hello twoplustwo firstarg
 
 COMPLETION := $(CHALLENGES:%=done/%.done)
 

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+ME=$(basename "$0")
+
+if [ "$1" == "--help" ]; then
+	echo "Create a program that prints whatever is passed as the first argument."
+	echo
+	exit 1
+fi
+
+RESULT=$(run/"$ME" "tres bien")
+
+if [ "$RESULT" == "tres bien" ]; then
+	touch done/"$ME".done
+	exit 0
+fi
+
+exit 1
