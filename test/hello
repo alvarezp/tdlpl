@@ -8,7 +8,7 @@ if [ "$1" == "--help" ]; then
 	exit 1
 fi
 
-RESULT=$(run/"$ME")
+RESULT=$(run/"$ME" | tr '[:upper:]' '[:lower:]')
 
 if [ "$RESULT" == "hello" ]; then
 	touch done/"$ME".done
