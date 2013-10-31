@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ME=$(basename "$0")
+
+if [ "$1" == "--help" ]; then
+	echo "Create a program that prints whatever is passed as the first"
+	echo "argument. The passed argument is guaranteed to be a positive,"
+	echo "non-zero integer."
+	echo
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 7)
+
+if [ "$RESULT" == "7" ]; then
+	touch done/"$ME".done
+	exit 0
+fi
+
+exit 1
