@@ -5,18 +5,20 @@ ME=$(basename $0)
 if [ "$1" == "--help" ]; then
 	echo "Welcome to TDLPL: Test-Driven Learning Programming Languages."
 	echo
-	echo "You will be presented with challenges that you should solve in the"
-	echo "programming language of your choice. After you attempt to solve the"
-	echo "challenge, issue 'make progress' (or just 'make') to continue."
+	echo "You will be presented with challenges that you should solve in"
+	echo "the programming language of your choice. After you attempt to"
+	echo "solve the challenge, issue 'make progress' (or just 'make') to"
+	echo "continue."
 	echo
-	echo "When attempting to solve a challenge, name your program after the"
-	echo "challenge name you see on the 'Next challenge:' line above. Add the"
-	echo "appropriate suffix according to the language you are trying to"
-	echo "learn. The file should be in the directory you are currently in."
+	echo "When attempting to solve a challenge, name your program after"
+	echo "the challenge name you see on the 'Next challenge:' line above."
+	echo "Add the appropriate suffix according to the language you are"
+	echo "trying to learn. The file should be in the directory you are"
+	echo "currently in."
 	echo
-	echo "For example, to get past this screen, create a file called welcome.py"
-	echo "if you are learning Python, or welcome.rb if you are learning Ruby."
-	echo "Consider this to be your first challenge."
+	echo "For example, to get past this screen, create a file called"
+	echo "welcome.py if you are learning Python, or welcome.rb if you are"
+	echo "learning Ruby. Consider this to be your first challenge."
 	echo
 	echo "Good luck!"
 	echo
