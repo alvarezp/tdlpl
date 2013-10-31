@@ -18,6 +18,12 @@ run/%: %.py
 	@cp $^ $@
 	@chmod +x $@
 
+run/%: %.rb
+	@echo === $*: preparing...
+	@mkdir -p run
+	@cp $^ $@
+	@chmod +x $@
+
 run/%:
 	@echo === Next challenge: $*
 	@test/$* --help; false
