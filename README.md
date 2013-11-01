@@ -20,7 +20,7 @@ You might need to run `gmake` on non-GNU or non-Linux systems.
 Current state
 =============
 
-TDLPL currently recognizes two programming languages: Python and Ruby.
+TDLPL currently recognizes two programming languages: Python, Ruby and PHP.
 Adding new languages is really easy: edit the GNUmakefile to add the
 corresponding rule that prepares the runnable file. The runnable file goes
 into the run/ directory. Announce the new supported language in

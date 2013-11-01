@@ -48,6 +48,13 @@ configuration:
 	@cat test/messages/welcome
 	@false
 
+run/%: %.php configuration
+	@echo === $*: preparing...
+	@$(MAKE) -s check-hashbang/$*.php
+	@mkdir -p run
+	@cp $< $@
+	@chmod +x $@
+
 run/%: %.py configuration
 	@echo === $*: preparing...
 	@$(MAKE) -s check-hashbang/$*.py
