@@ -5,10 +5,6 @@ ME=$(basename $0)
 if [ "$1" == "--help" ]; then
 	echo "Create a program that runs. It doesn't matter what it does, as long as it runs."
 	echo
-	echo "Remember, your program should be named 'execute.py' or 'execute.rb',"
-	echo "depending if you are trying to learn Python or Ruby. Also, it must be"
-	echo "placed in the directory you are currently in."
-	echo
 	exit 1
 fi
 

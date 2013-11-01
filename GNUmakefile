@@ -30,6 +30,7 @@ fail/%:
 	@echo
 	@test/$* --help; true
 	@echo
+	@$(MAKE) -s remind_filename/$*
 	@false;
 
 done/%.done: test/% run/%
@@ -55,7 +56,17 @@ run/%: %.rb configuration
 	@cp $< $@
 	@chmod +x $@
 
+.PHONY: remind_filename/%
+remind_filename/%:
+	@echo Your program must be called $*.$(EXT) and placed in the current \
+		directory.
+	@echo
+	@true
+
 run/%:
 	@echo === Next challenge: $*
 	@test/$* --help; true;
+	@echo
+	@$(MAKE) -s remind_filename/$*
+	@false
 
