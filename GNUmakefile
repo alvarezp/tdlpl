@@ -49,5 +49,5 @@ run/%: %.rb
 
 run/%:
 	@echo === Next challenge: $*
-	@test/$* --help; false
+	@test/$* --help; true;
 
