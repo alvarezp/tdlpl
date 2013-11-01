@@ -38,13 +38,13 @@ done/%.done: test/% run/%
 run/%: %.py
 	@echo === $*: preparing...
 	@mkdir -p run
-	@cp $^ $@
+	@cp $< $@
 	@chmod +x $@
 
 run/%: %.rb
 	@echo === $*: preparing...
 	@mkdir -p run
-	@cp $^ $@
+	@cp $< $@
 	@chmod +x $@
 
 run/%:
