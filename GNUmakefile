@@ -69,6 +69,11 @@ run/%: %.rb configuration
 	@cp $< $@
 	@chmod +x $@
 
+run/%: %.c configuration
+	@echo === $*: preparing...
+	@mkdir -p run
+	@c99 -o run/$* $< -l c -l l -l pthread -l m -l rt -l y
+
 .PHONY: remind_filename/%
 remind_filename/%:
 	@echo Your program must be called $*.$(EXT) and placed in the current \
