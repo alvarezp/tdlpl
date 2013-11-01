@@ -23,8 +23,8 @@ Current state
 TDLPL currently recognizes four programming languages: Python, Ruby, PHP and C.
 Adding new languages is really easy: edit the GNUmakefile to add the
 corresponding rule that prepares the runnable file. The runnable file goes
-into the run/ directory. Announce the new supported language in
-test/messages/welcome.
+into the run/ directory. Finally, create its sample configuration file under
+config-samples/.
 
 At this state the project only has basic start challenges. More should come
 in a few months... sooner if you help me out!

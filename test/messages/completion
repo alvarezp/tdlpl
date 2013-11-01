@@ -12,8 +12,8 @@ appropriate place according to the challenge difficulty.
 
 To support a new programming language, edit the GNUmakefile to add the
 corresponding rule that prepares the runnable file. The runnable file goes
-into the run/ directory. Announce the new supported language in
-test/messages/welcome.
+into the run/ directory. Finally, create its sample configuration file under
+config-samples/.
 
 ===============================================================================
 
