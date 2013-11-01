@@ -1,4 +1,4 @@
-CHALLENGES := execute hello twoplustwo firstarg firstarg-int square
+CHALLENGES := execute hello twoplustwo firstarg firstarg-int square remainder
 
 COMPLETION := $(CHALLENGES:%=done/%.done)
 

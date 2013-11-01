@@ -1,0 +1,35 @@
+#!/bin/bash
+
+ME=$(basename "$0")
+
+if [ "$1" == "--help" ]; then
+	echo "Create a program that extracts and prints the last digit of a"
+	echo "given number. The number will be provided as the first argument"
+	echo "of the program."
+	echo
+	echo "For example, if the program is called like:"
+	echo "  $ME 256"
+	echo "the program should print:"
+	echo "  6"
+	exit 0
+fi
+
+RESULT=$(run/"$ME" 289)
+
+if [ "$RESULT" != "9" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 1512)
+
+if [ "$RESULT" != "2" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 3)
+
+if [ "$RESULT" != "3" ]; then
+	exit 1
+fi
+
+touch done/"$ME".done
