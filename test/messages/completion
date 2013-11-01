@@ -1,0 +1,20 @@
+
+===============================================================================
+
+CONGRATULATIONS! You have reached the end of the TDLPL challenges!
+
+Many thanks for using TDLPL. This is what we have so far. If you would like to
+contribute to the project here are some hints:
+
+To create a new challenge create a test under the test/ directory and add it
+to the CHALLENGES variable to the GNUmakefile. Make sure you insert it in an
+appropriate place according to the challenge difficulty.
+
+To support a new programming language, edit the GNUmakefile to add the
+corresponding rule that prepares the runnable file. The runnable file goes
+into the run/ directory. Announce the new supported language in
+test/messages/welcome.
+
+===============================================================================
+
+
