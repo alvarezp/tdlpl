@@ -40,18 +40,38 @@ done/%.done: test/% run/%
 	@echo "::: CONGRATULATIONS, you passed the '$*' challenge!"
 	@echo
 
+.PHONY: header-missing/%
+header-missing/%:
+	@echo "::: ERROR: Your program is missing the hashbang (#!) signature"
+	@echo "    and, thus, it was not identified as a valid $* script."
+	@echo
+	@echo "You must find the correct hashbang header and place it on the"
+	@echo "top of your script. It will not run otherwise."
+	@echo
+	@echo "See the following Wikipedia article:"
+	@echo " - https://en.wikipedia.org/wiki/Hashbang"
+	@echo
+	@false
+
+.PHONY : check-hashbang/%
+check-hashbang/%:
+	@file -b --mime-type $* | grep -q "$(MIME)" || \
+		$(MAKE) -s header-missing/$(LANG)
+
 configuration:
 	@cat test/messages/welcome
 	@false
 
 run/%: %.py configuration
 	@echo === $*: preparing...
+	@$(MAKE) -s check-hashbang/$*.py
 	@mkdir -p run
 	@cp $< $@
 	@chmod +x $@
 
 run/%: %.rb configuration
 	@echo === $*: preparing...
+	@$(MAKE) -s check-hashbang/$*.rb
 	@mkdir -p run
 	@cp $< $@
 	@chmod +x $@
