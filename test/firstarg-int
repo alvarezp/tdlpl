@@ -7,6 +7,10 @@ if [ "$1" == "--help" ]; then
 	echo "argument. The passed argument is guaranteed to be a positive,"
 	echo "non-zero integer."
 	echo
+	echo "In other words, if your program is called like this:"
+	echo "  $ME 82"
+	echo "then its output should be:"
+	echo "  82"
 	exit 1
 fi
 

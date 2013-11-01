@@ -6,6 +6,10 @@ if [ "$1" == "--help" ]; then
 	echo "Create a program that prints whatever is passed as the first argument."
 	echo "The passed argument is guaranteed to be a string."
 	echo
+	echo "In other words, if your program is called like this:"
+	echo "  $ME 'hello world'"
+	echo "then its output should be:"
+	echo "  'hello world'"
 	exit 1
 fi
 
