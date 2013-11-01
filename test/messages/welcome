@@ -1,0 +1,16 @@
+Welcome to TDLPL: Test-Driven Learning Programming Languages.
+
+You will be presented with challenges that you should solve in the programming
+language of your choice. After you attempt to solve the challenge, issue 'make
+progress' (or just 'make') to continue.
+
+To start you must configure TDLPL. You will find a set of sample configuration
+files under the directory config-samples. Choose the one of your preference and
+copy it to the current directory under the name 'configuration'. Consider this
+to be your first challenge.
+
+Also, please keep in mind that 'make' will keep showing an 'Error: 1' message.
+It means that you have not completed the full set of challenges.
+
+Good luck!
+

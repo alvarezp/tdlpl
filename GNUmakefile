@@ -1,9 +1,13 @@
-CHALLENGES := welcome execute hello twoplustwo firstarg firstarg-int square
+CHALLENGES := execute hello twoplustwo firstarg firstarg-int square
 
 COMPLETION := $(CHALLENGES:%=done/%.done)
 
+LANG := $(lastword $(shell grep '^language' configuration 2>/dev/null))
+MIME := $(lastword $(shell grep '^mimetype' configuration 2>/dev/null))
+EXT := $(lastword $(shell grep '^extension' configuration 2>/dev/null))
+
 .PHONY: progress
-progress: $(COMPLETION)
+progress: configuration $(COMPLETION)
 	@echo
 	@echo CONGRATULATIONS! You have reached the end of the TDLPL
 	@echo challenges.
@@ -17,7 +21,7 @@ progress: $(COMPLETION)
 	@echo To support a new programming language, edit the GNUmakefile to
 	@echo add the corresponding rule that prepares the runnable file. The
 	@echo runnable file goes into the run/ directory. Announce the new
-	@echo supported language in test/welcome.
+	@echo supported language in test/messages/welcome.
 	@echo
 
 .PHONY : fail/%
@@ -35,13 +39,17 @@ done/%.done: test/% run/%
 	@echo "::: CONGRATULATIONS, you passed the '$*' challenge!"
 	@echo
 
-run/%: %.py
+configuration:
+	@cat test/messages/welcome
+	@false
+
+run/%: %.py configuration
 	@echo === $*: preparing...
 	@mkdir -p run
 	@cp $< $@
 	@chmod +x $@
 
-run/%: %.rb
+run/%: %.rb configuration
 	@echo === $*: preparing...
 	@mkdir -p run
 	@cp $< $@
