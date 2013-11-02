@@ -6,7 +6,7 @@ if [ "$1" == "--help" ]; then
 	echo "Create a program that prints the result of 2 + 2."
 	echo
 	echo "Of course you can cheat and print 4, but that is kinda obvious,"
-	echo "isn't it? Never print the direct answer directly."
+	echo "isn't it?"
 	echo
 	exit 1
 fi
