@@ -1,0 +1,33 @@
+#!/bin/bash
+
+ME=$(basename "$0")
+
+if [ "$1" == "--help" ]; then
+	echo "Create a program that prints 'prime' or 'not prime' according to the"
+	echo "given number."
+	echo
+	echo "For example, if the program is called like:"
+	echo "  $ME 5309"
+	echo "the program should print:"
+	echo "  prime"
+	echo
+	echo "Please not the string must be in lower case, and just like shown."
+	exit 0
+fi
+
+RESULT=$(run/"$ME" 2377)
+if [ "$RESULT" != "prime" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 7527)
+if [ "$RESULT" != "not prime" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 32)
+if [ "$RESULT" != "not prime" ]; then
+	exit 1
+fi
+
+touch done/"$ME".done
