@@ -5,6 +5,7 @@ CHALLENGES += firstarg
 CHALLENGES += firstarg-int
 CHALLENGES += square
 CHALLENGES += remainder
+CHALLENGES += condition
 CHALLENGES += factorial
 
 COMPLETION := $(CHALLENGES:%=done/%.done)

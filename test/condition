@@ -1,0 +1,31 @@
+#!/bin/bash
+
+ME=$(basename "$0")
+
+if [ "$1" == "--help" ]; then
+	echo "Create a program that prints 'zero', 'one' or 'two' according to"
+	echo "the modulo 3 of the integer given as the first argument."
+	echo
+	echo "For example, if the program is called like:"
+	echo "  $ME 431"
+	echo "the program should print:"
+	echo "  two"
+	exit 0
+fi
+
+RESULT=$(run/"$ME" 77)
+if [ "$RESULT" != "two" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 11)
+if [ "$RESULT" != "two" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 9)
+if [ "$RESULT" != "zero" ]; then
+	exit 1
+fi
+
+touch done/"$ME".done
