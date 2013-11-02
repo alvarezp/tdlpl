@@ -1,0 +1,42 @@
+#!/bin/bash
+
+ME=$(basename "$0")
+
+if [ "$1" == "--help" ]; then
+	echo "Create a program that prints the factorial of a given number."
+	echo "The number will be given as the first argument of the program."
+	echo
+	echo "For example, if the program is called like:"
+	echo "  $ME 14"
+	echo "the program should print:"
+	echo "  87178291200"
+	echo
+	echo "Notice the result is an integer with no thousand separators."
+	exit 0
+fi
+
+RESULT=$(run/"$ME" 7)
+[ "$RESULT" -eq "$RESULT" ] 2> /dev/null || exit 1
+if [ "$RESULT" -ne "5040" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 9)
+[ "$RESULT" -eq "$RESULT" ] 2> /dev/null || exit 1
+if [ "$RESULT" -ne "362880" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 0)
+[ "$RESULT" -eq "$RESULT" ] 2> /dev/null || exit 1
+if [ "$RESULT" -ne "1" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 1)
+[ "$RESULT" -eq "$RESULT" ] 2> /dev/null || exit 1
+if [ "$RESULT" -ne "1" ]; then
+	exit 1
+fi
+
+touch done/"$ME".done
