@@ -1,0 +1,34 @@
+#!/bin/bash
+
+ME=$(basename "$0")
+
+if [ "$1" == "--help" ]; then
+	echo "Create a program that prints if a number and the next 10 numbers are"
+	echo "primes or not. For each number, the strings 'yes' or 'no' should be"
+	echo "printed, all in one line separated by a space".
+	echo
+	echo "For example, if the program is called like:"
+	echo "  $ME 5300"
+	echo "the program should print:"
+	echo "  no no no yes no no no no no yes no"
+	echo
+	echo "Please not the string must be in lower case, and just like shown."
+	exit 0
+fi
+
+RESULT=$(run/"$ME" 2700)
+if [ "$RESULT" != "no no no no no no no yes no no no" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 7520)
+if [ "$RESULT" != "no no no yes no no no no no yes no" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 64)
+if [ "$RESULT" != "no no no yes no no no yes no yes no" ]; then
+	exit 1
+fi
+
+touch done/"$ME".done

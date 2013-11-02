@@ -8,6 +8,7 @@ CHALLENGES += remainder
 CHALLENGES += condition
 CHALLENGES += factorial
 CHALLENGES += isprime
+CHALLENGES += areprimes
 
 COMPLETION := $(CHALLENGES:%=done/%.done)
 
