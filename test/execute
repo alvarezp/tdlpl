@@ -5,6 +5,8 @@ ME=$(basename $0)
 if [ "$1" == "--help" ]; then
 	echo "Create a program that runs. It doesn't matter what it does, as long as it runs."
 	echo
+	echo "Hint: if the compiler/interpreter is not installed, you may need to set it up".
+	echo
 	exit 1
 fi
 
