@@ -1,4 +1,10 @@
-CHALLENGES := execute hello twoplustwo firstarg firstarg-int square remainder
+CHALLENGES := execute
+CHALLENGES += hello
+CHALLENGES += twoplustwo
+CHALLENGES += firstarg
+CHALLENGES += firstarg-int
+CHALLENGES += square
+CHALLENGES += remainder
 CHALLENGES += factorial
 
 COMPLETION := $(CHALLENGES:%=done/%.done)
