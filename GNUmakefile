@@ -9,6 +9,7 @@ CHALLENGES += condition
 CHALLENGES += factorial
 CHALLENGES += isprime
 CHALLENGES += areprimes
+CHALLENGES += sum-args
 
 COMPLETION := $(CHALLENGES:%=done/%.done)
 
