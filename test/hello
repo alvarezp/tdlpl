@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 ME=$(basename "$0")
 
-if [ "$1" == "--help" ]; then
+if [ "$1" = "--help" ]; then
 	echo "Create a program that prints 'hello'."
 	echo
 	exit 1
@@ -10,7 +10,7 @@ fi
 
 RESULT=$(run/"$ME" | tr '[:upper:]' '[:lower:]')
 
-if [ "$RESULT" == "hello" ]; then
+if [ "$RESULT" = "hello" ]; then
 	touch done/"$ME".done
 	exit 0
 fi

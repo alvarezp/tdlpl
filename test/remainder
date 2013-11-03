@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 ME=$(basename "$0")
 
-if [ "$1" == "--help" ]; then
+if [ "$1" = "--help" ]; then
 	echo "Create a program that extracts and prints the last digit of a"
 	echo "given number. The number will be provided as the first argument"
 	echo "of the program."

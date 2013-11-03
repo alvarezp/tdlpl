@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 ME=$(basename "$0")
 
-if [ "$1" == "--help" ]; then
+if [ "$1" = "--help" ]; then
 	echo "Create a program that takes a numeric first argument and squares"
 	echo "it. The passed argument is guaranteed to be a positive integer."
 	echo
@@ -11,7 +11,7 @@ fi
 
 RESULT=$(run/"$ME" 6)
 
-if [ "$RESULT" == "36" ]; then
+if [ "$RESULT" = "36" ]; then
 	touch done/"$ME".done
 	exit 0
 fi

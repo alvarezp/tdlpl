@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 ME=$(basename "$0")
 
-if [ "$1" == "--help" ]; then
+if [ "$1" = "--help" ]; then
 	echo "Create a program that prints the result of 2 + 2."
 	echo
 	echo "Of course you can cheat and print 4, but that is kinda obvious,"
@@ -13,7 +13,7 @@ fi
 
 RESULT=$(run/"$ME")
 
-if [ "$RESULT" == "4" ]; then
+if [ "$RESULT" = "4" ]; then
 	touch done/"$ME".done
 	exit 0
 fi

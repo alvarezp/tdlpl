@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 ME=$(basename "$0")
 
-if [ "$1" == "--help" ]; then
+if [ "$1" = "--help" ]; then
 	echo "Create a program that prints if a number and the next 10 numbers are"
 	echo "primes or not. For each number, the strings 'yes' or 'no' should be"
 	echo "printed, all in one line separated by a space".
