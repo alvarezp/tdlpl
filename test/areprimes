@@ -12,7 +12,7 @@ if [ "$1" = "--help" ]; then
 	echo "the program should print:"
 	echo "  no no no yes no no no no no yes no"
 	echo
-	echo "Please not the string must be in lower case, and just like shown."
+	echo "Please note: the string must be in lower case, and just like shown."
 	exit 0
 fi
 
