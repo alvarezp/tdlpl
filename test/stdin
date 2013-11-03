@@ -1,0 +1,26 @@
+#!/bin/sh
+
+ME=$(basename "$0")
+
+if [ "$1" = "--help" ]; then
+	echo "Create a program that prints back whatever input is given on"
+	echo "standard input. The program will be given no arguments."
+	exit 0
+fi
+
+RESULT=$(echo "Hello world!" | run/"$ME" | tr '\n' @)
+if [ "$RESULT" != "Hello world!@" ]; then
+	exit 1
+fi
+
+RESULT=$( (echo "Hello"; echo "Goodbye") | run/"$ME" | tr '\n' @)
+if [ "$RESULT" != "Hello@Goodbye@" ]; then
+	exit 1
+fi
+
+RESULT=$( (echo "Line1"; echo "Line2"; echo "Line3") | run/"$ME" | tr '\n' @)
+if [ "$RESULT" != "Line1@Line2@Line3@" ]; then
+	exit 1
+fi
+
+touch done/"$ME".done

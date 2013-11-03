@@ -11,6 +11,7 @@ CHALLENGES += isprime
 CHALLENGES += areprimes
 CHALLENGES += sum-args
 CHALLENGES += mode10
+CHALLENGES += stdin
 
 COMPLETION := $(CHALLENGES:%=done/%.done)
 
