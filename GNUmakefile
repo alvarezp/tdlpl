@@ -35,7 +35,7 @@ fail/%:
 
 done/%.done: test/% run/%
 	@echo === $*: executing...
-	@mkdir -p done
+	@mkdir -p $(shell dirname $@)
 	@$< || $(MAKE) -s fail/$*
 	@touch $@
 	@echo "::: CONGRATULATIONS, you passed the '$*' challenge!"
