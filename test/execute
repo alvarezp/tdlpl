@@ -11,7 +11,3 @@ if [ "$1" = "--help" ]; then
 fi
 
 run/$ME || exit 1;
-
-touch done/$ME.done
-
-exit 0

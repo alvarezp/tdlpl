@@ -31,5 +31,3 @@ RESULT=$(run/"$ME" 3)
 if [ "$RESULT" != "3" ]; then
 	exit 1
 fi
-
-touch done/"$ME".done

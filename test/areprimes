@@ -30,5 +30,3 @@ RESULT=$(run/"$ME" 64)
 if [ "$RESULT" != "no no no yes no no no yes no yes no" ]; then
 	exit 1
 fi
-
-touch done/"$ME".done

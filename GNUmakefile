@@ -37,6 +37,7 @@ done/%.done: test/% run/%
 	@echo === $*: executing...
 	@mkdir -p done
 	@$< || $(MAKE) -s fail/$*
+	@touch $@
 	@echo "::: CONGRATULATIONS, you passed the '$*' challenge!"
 	@echo
 

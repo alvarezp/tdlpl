@@ -14,7 +14,6 @@ fi
 RESULT=$(run/"$ME")
 
 if [ "$RESULT" = "4" ]; then
-	touch done/"$ME".done
 	exit 0
 fi
 

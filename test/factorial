@@ -38,5 +38,3 @@ RESULT=$(run/"$ME" 1)
 if [ "$RESULT" -ne "1" ]; then
 	exit 1
 fi
-
-touch done/"$ME".done

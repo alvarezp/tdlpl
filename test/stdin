@@ -22,5 +22,3 @@ RESULT=$( (echo "Line1"; echo "Line2"; echo "Line3") | run/"$ME" | tr '\n' @)
 if [ "$RESULT" != "Line1@Line2@Line3@" ]; then
 	exit 1
 fi
-
-touch done/"$ME".done

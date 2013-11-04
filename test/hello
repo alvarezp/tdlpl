@@ -11,7 +11,6 @@ fi
 RESULT=$(run/"$ME" | tr '[:upper:]' '[:lower:]')
 
 if [ "$RESULT" = "hello" ]; then
-	touch done/"$ME".done
 	exit 0
 fi
 

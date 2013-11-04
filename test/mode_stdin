@@ -38,5 +38,3 @@ RESULT=$(for N in $NUMBERS; do echo $N; done | run/"$ME")
 if [ "$RESULT" != "71 5" ]; then
 	exit 1
 fi
-
-touch done/"$ME".done
