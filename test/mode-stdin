@@ -1,0 +1,42 @@
+#!/bin/sh
+
+ME=$(basename "$0")
+
+if [ "$1" = "--help" ]; then
+	echo "Create a program that prints the most popular number among a set"
+	echo "given on standard input, and how many of the most popular number"
+	echo "were there."
+	echo
+	echo "If the given set has more than one most-popular number, the program"
+	echo "should print 'invalid set'."
+	echo
+	echo "There is no guarantee on the number of elements in the set."
+	echo
+	echo "For example, if standard input is:"
+	echo "  40"
+	echo "  40"
+	echo "  1"
+	echo "the program should print:"
+	echo "  40 2"
+	exit 0
+fi
+
+NUMBERS='3 9 3 5 1 7 3 2 9 0 1 3 2 7 4 3 3 10 7 84 3 354 93 0 0 3 10 20 30 2 3'
+RESULT=$(for N in $NUMBERS; do echo $N; done | run/"$ME")
+if [ "$RESULT" != "3 9" ]; then
+	exit 1
+fi
+
+NUMBERS='100 200 30 100 200 200 3 100 4 1 25 76 17 88 309 532 845 199 4309'
+RESULT=$(for N in $NUMBERS; do echo $N; done | run/"$ME")
+if [ "$RESULT" != "invalid set" ]; then
+	exit 1
+fi
+
+NUMBERS='105 71 4 56 71 8 6 71 8 1 71 0 4 1 25 76 17 88 8 1 71 0 4 1 25 76 17'
+RESULT=$(for N in $NUMBERS; do echo $N; done | run/"$ME")
+if [ "$RESULT" != "71 5" ]; then
+	exit 1
+fi
+
+touch done/"$ME".done
