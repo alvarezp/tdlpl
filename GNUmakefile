@@ -2,17 +2,17 @@ CHALLENGES := execute
 CHALLENGES += hello
 CHALLENGES += twoplustwo
 CHALLENGES += firstarg
-CHALLENGES += firstarg-int
+CHALLENGES += firstarg_int
 CHALLENGES += square
 CHALLENGES += remainder
 CHALLENGES += condition
 CHALLENGES += factorial
 CHALLENGES += isprime
 CHALLENGES += areprimes
-CHALLENGES += sum-args
+CHALLENGES += sum_args
 CHALLENGES += mode10
 CHALLENGES += stdin
-CHALLENGES += mode-stdin
+CHALLENGES += mode_stdin
 
 COMPLETION := $(CHALLENGES:%=done/%.done)
 
