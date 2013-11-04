@@ -83,6 +83,13 @@ run/%: %.rb configuration
 	@cp $< $@
 	@chmod +x $@
 
+run/%: %.js configuration
+	@echo === $*: preparing...
+	@$(MAKE) -s check-hashbang/$*.js
+	@mkdir -p run
+	@cp $< $@
+	@chmod +x $@
+
 run/%: %.c configuration
 	@echo === $*: preparing...
 	@mkdir -p run
