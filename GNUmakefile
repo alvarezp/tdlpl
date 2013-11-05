@@ -56,7 +56,7 @@ header-missing/%:
 
 .PHONY : check-hashbang/%
 check-hashbang/%:
-	@file -b --mime-type $* | grep -q "$(MIME)" || \
+	@file -b --mime-type $* | grep -q "^$(MIME)$$" || \
 		$(MAKE) -s header-missing/$(LANG)
 
 configuration:
