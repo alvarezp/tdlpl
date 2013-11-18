@@ -96,6 +96,11 @@ run/%: %.c configuration
 	@mkdir -p run
 	@c99 -o run/$* $< -l c -l l -l pthread -l m -l rt -l y
 
+run/%: %.go configuration
+	@echo === $*: preparing...
+	@mkdir -p run
+	@go build -o run/$* $<
+
 .PHONY: remind_filename/%
 remind_filename/%:
 	@echo Your program must be called $*.$(EXT) and placed in the current \

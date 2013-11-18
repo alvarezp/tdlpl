@@ -20,7 +20,7 @@ You might need to run `gmake` on non-GNU or non-Linux systems.
 Current state
 =============
 
-TDLPL currently recognizes Python, Ruby, PHP, C and JavaScript.
+TDLPL currently recognizes Python, Ruby, PHP, C, Go and JavaScript.
 Adding new languages is really easy: edit the GNUmakefile to add the
 corresponding rule that prepares the runnable file. The runnable file goes
 into the run/ directory. Finally, create its sample configuration file under
