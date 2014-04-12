@@ -13,6 +13,7 @@ CHALLENGES += sum_args
 CHALLENGES += mode10
 CHALLENGES += stdin
 CHALLENGES += mode_stdin
+CHALLENGES += gcd2
 
 COMPLETION := $(CHALLENGES:%=done/%.done)
 
