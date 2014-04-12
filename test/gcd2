@@ -1,0 +1,80 @@
+#!/bin/sh
+
+ME=$(basename "$0")
+
+if [ "$1" = "--help" ]; then
+	echo "Create a program that prints the greatest common divisor (GCD)"
+	echo "for 2 numbers given as parameters."
+	echo
+	echo "Use whatever algorithm you want, but try learning the Euclidean."
+	echo
+	echo "You can safely assume the givens will be positive integers and"
+	echo "none will be zero."
+	echo
+	echo "For example, if the program is called like:"
+	echo "  $ME 50 75"
+	echo "the program should print:"
+	echo "  25"
+	exit 0
+fi
+
+RESULT=$(run/"$ME" 32 8)
+if [ "$RESULT" != "8" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 8 32)
+if [ "$RESULT" != "8" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 90 60)
+if [ "$RESULT" != "30" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 60 90)
+if [ "$RESULT" != "30" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 1500 7200)
+if [ "$RESULT" != "300" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 7200 1500)
+if [ "$RESULT" != "300" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 1 100)
+if [ "$RESULT" != "1" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 100 1)
+if [ "$RESULT" != "1" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 49 121)
+if [ "$RESULT" != "1" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 121 49)
+if [ "$RESULT" != "1" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 3400 3400)
+if [ "$RESULT" != "3400" ]; then
+	exit 1
+fi
+
+RESULT=$(run/"$ME" 81 81)
+if [ "$RESULT" != "81" ]; then
+	exit 1
+fi
+
